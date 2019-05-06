@@ -39,6 +39,7 @@ img {
 .img-gallery,
 .img-calculator {
   max-width: 100%;
+  text-align: center;
 }
 
 .contact {
@@ -56,7 +57,8 @@ img {
 }
 
 .name a,
-.main-nav a {
+.main-nav a,
+.name {
   text-align: center;
   display: block;
   padding: 10px 15px;
@@ -90,8 +92,8 @@ img {
 }
 
 .banner {
-  color: #fff;
-  background: #dfdfdf;
+  color: rgb(82, 82, 82);
+  background: #ffffff;
   padding: 3.2em 0;
   margin-bottom: 60px;
 }
@@ -99,6 +101,7 @@ img {
 .col {
   padding-right: 1em;
   padding-left: 1em;
+  text-align: center;
 }
 
 .main-footer {
@@ -111,15 +114,22 @@ img {
 
 .logo {
   width: 300px;
-  float: right;
+  /* float: right; */
   display: block;
-  margin-right: 17.5em;
+  /* margin-right: 17.5em; */
+  display: block;
+  margin: 0 auto;
+}
+
+#Portfolio {
+  text-align: center;
 }
 
 .headline {
   margin-bottom: 0;
   text-align: left;
   margin-left: 50px;
+  display: block;
 }
 
 /* ================================= 
@@ -154,9 +164,10 @@ img {
   .tagline {
     font-size: 1.2em;
     text-align: left;
-    max-width: 30%;
+    max-width: 50%;
     display: block;
-    margin-left: 14.5em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* ---- Float clearfix ---- */
@@ -182,5 +193,28 @@ img {
   .secondary,
   .tertiary {
     width: 33.3%;
+  }
+
+  .logo {
+    float: right;
+    margin-right: 17.5em;
+  }
+
+  .tagline {
+    font-size: 1.2em;
+    text-align: left;
+    max-width: 30%;
+    display: block;
+    float: left;
+    position: fixed;
+    top: 5em;
+    left: 15em;
+    right: auto;
+  }
+
+  .clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
   }
 }
