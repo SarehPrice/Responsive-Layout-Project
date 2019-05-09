@@ -96,12 +96,16 @@ img {
   background: #ffffff;
   padding: 3.2em 0;
   margin-bottom: 60px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .col {
   padding-right: 1em;
   padding-left: 1em;
   text-align: center;
+  float: left;
 }
 
 .main-footer {
@@ -136,29 +140,67 @@ img {
     Media Queries
   ==================================== */
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .container {
     width: 90%;
     margin: 0 auto;
   }
 
-  .name,
+  /* .name,
   .col {
     float: left;
-  }
+  } */
 
   .primary,
-  .secondary {
+  .secondary,
+  .tertiary {
     width: 50%;
+    display: inline-block;
+    min-height: 375px;
   }
 
-  .main-nav {
+  /* .main-nav {
     float: right;
-  }
+  } */
 
   .main-nav li {
     display: inline-block;
     margin-left: 15px;
+  }
+
+  .main-nav {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .name a,
+  .main-nav a,
+  .name {
+    text-align: center;
+    display: block;
+    padding: 10px 15px;
+  }
+
+  .second-nav {
+    float: right;
+  }
+
+  .nameb {
+    font-size: 1.25em;
+    margin: 0;
+    float: left;
+  }
+
+  .second-nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .second-nav a {
+    font-size: 0.95em;
+    color: #dbdbdb;
+    text-transform: uppercase;
+    color: black;
   }
 
   .tagline {
@@ -170,6 +212,14 @@ img {
     margin-right: auto;
   }
 
+  .logo {
+    width: 300px;
+    float: right;
+    display: block;
+    margin-right: 14em;
+    display: block;
+  }
+
   /* ---- Float clearfix ---- */
 
   .clearfix::after {
@@ -179,11 +229,41 @@ img {
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .container {
     width: 80%;
     max-width: 1150px;
     text-align: center;
+  }
+
+  .name,
+  .col {
+    float: left;
+  }
+
+  .main-nav {
+    float: right;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .second-nav {
+    float: right;
+  }
+
+  .second-nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .second-nav a {
+    font-size: 0.95em;
+    color: #dbdbdb;
+    text-transform: uppercase;
+    color: black;
   }
 
   .primary {
@@ -195,26 +275,25 @@ img {
     width: 33.3%;
   }
 
+  .clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (min-width: 1200px) {
   .logo {
     float: right;
-    margin-right: 17.5em;
+    /* margin-right: 17.5em; */
   }
 
   .tagline {
     font-size: 1.2em;
     text-align: left;
-    max-width: 30%;
+    max-width: 50%;
     display: block;
     float: left;
-    position: fixed;
-    top: 5em;
-    left: 15em;
-    right: auto;
-  }
-
-  .clearfix::after {
-    content: " ";
-    display: table;
-    clear: both;
+    /* padding-left: 14em; */
   }
 }
