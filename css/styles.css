@@ -16,7 +16,7 @@ p {
 h2,
 h3,
 a {
-  color: #093a58;
+  color: #7e0083;
 }
 
 h2,
@@ -25,7 +25,7 @@ h3 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 img {
@@ -79,9 +79,18 @@ img {
   text-align: center;
 }
 
+.second-nav {
+  display: none;
+}
+
 /* ---- Layout Containers ---- */
 
 .main-header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.side-nav {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
@@ -136,6 +145,12 @@ img {
   display: block;
 }
 
+.clearfix::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 /* ================================= 
     Media Queries
   ==================================== */
@@ -146,11 +161,6 @@ img {
     margin: 0 auto;
   }
 
-  /* .name,
-  .col {
-    float: left;
-  } */
-
   .primary,
   .secondary,
   .tertiary {
@@ -158,10 +168,6 @@ img {
     display: inline-block;
     min-height: 375px;
   }
-
-  /* .main-nav {
-    float: right;
-  } */
 
   .main-nav li {
     display: inline-block;
@@ -181,8 +187,8 @@ img {
     padding: 10px 15px;
   }
 
-  .second-nav {
-    float: right;
+  .back {
+    display: none;
   }
 
   .nameb {
@@ -216,16 +222,15 @@ img {
     width: 300px;
     float: right;
     display: block;
-    margin-right: 14em;
-    display: block;
   }
 
-  /* ---- Float clearfix ---- */
-
-  .clearfix::after {
-    content: " ";
-    display: table;
-    clear: both;
+  .banner {
+    display: flex;
+    flex-direction: row;
+    line-height: 25px;
+    align-items: stretch;
+    margin: 50px 50px 50px 50px;
+    /* background-color: #f1f1f1; */
   }
 }
 
@@ -250,8 +255,13 @@ img {
     margin-left: 15px;
   }
 
+  .back {
+    display: none;
+  }
+
   .second-nav {
     float: right;
+    display: inline-block;
   }
 
   .second-nav li {
@@ -274,12 +284,6 @@ img {
   .tertiary {
     width: 33.3%;
   }
-
-  .clearfix::after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -295,5 +299,14 @@ img {
     display: block;
     float: left;
     /* padding-left: 14em; */
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: row;
+    line-height: 25px;
+    align-items: stretch;
+    margin: 50px 50px 50px 200px;
+    /* background-color: #f1f1f1; */
   }
 }
