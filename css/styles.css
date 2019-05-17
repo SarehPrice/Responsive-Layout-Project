@@ -187,14 +187,19 @@ img {
     padding: 10px 15px;
   }
 
-  .back {
-    display: none;
-  }
-
   .nameb {
     font-size: 1.25em;
     margin: 0;
     float: left;
+  }
+
+  .back {
+    display: none;
+  }
+
+  .second-nav {
+    float: right;
+    display: inline-block;
   }
 
   .second-nav li {
